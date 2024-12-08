@@ -94,7 +94,7 @@ const graphConf =
                 "size": 10,
                 "x": 0.30053135759643496,
                 "y": 0.7335648868604059,
-                "label": "5 investigador"
+                "label": "5, investigador"
             }
         },
         {
