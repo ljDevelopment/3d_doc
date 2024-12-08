@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/2.4.0/sigma.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/graphology/0.25.4/graphology.umd.min.js"></script>
+
+    <style>
+        [data-tags*="level0"] {
+            color: rgb(0, 0, 0);
+        }
+
+        /* Estilo para los elementos con data-set="1" */
+        [data-tags*="level1"] {
+            color: rgb(107, 107, 107);
+        }
+
+        img {
+            max-height: 40vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container" style="width: 800px; height: 600px; background: white"></div>
+    <fieldset id="state" style="position: fixed; top: 0; right: 0;">
+        <legend>Select a maintenance drone:</legend>
+
+        <div>
+            <input type="radio" id="edit" name="nodes" value="edit" checked />
+            <label for="edit">Edit node</label>
+        </div>
+
+        <div>
+            <input type="radio" id="addNode" name="nodes" value="addNode" />
+            <label for="addNode">Add node</label>
+        </div>
+
+        <div>
+            <input type="radio" id="removeNode" name="nodes" value="removeNode" />
+            <label for="removeNode">Remove node</label>
+        </div>
+
+        <div>
+            <input type="radio" id="addEdge" name="nodes" value="addEdge" />
+            <label for="addEdge">Add edge</label>
+        </div>
+
+        <div>
+            <input type="radio" id="removeEdge" name="nodes" value="removeEdge" />
+            <label for="removeEdge">Remove edge</label>
+        </div>
+
+    </fieldset>
+
+
+    <script type="module">
+
+        import Utils from './js/utils.js';
+        import SigmaEvents from './js/sigmaEvents.js'
+        import Piece, {printPiece} from './js/piece.js'
+        import AttributesForm from './js/attributes-form.js';
+        import graphConf from './graphConf.js';
+        import info from './info.js';
+
+        const body = document.querySelector('body');
+        const attributesForm = document.createElement('attributes-form');
+        attributesForm.style['position'] = 'fixed';
+        attributesForm.style['right'] = '0';
+        attributesForm.style['top'] = '50vh';
+        attributesForm.style['display'] = 'flex';
+        attributesForm.style['flex-direction'] = 'column';
+        body.appendChild(attributesForm);
+
+       
+        const piece = Piece.parse(info); console.log(piece);
+        console.log(piece);
+        printPiece(piece, body);
+
+        const leveled = document.querySelectorAll('[data-tags]');
+
+        function updateView(threshold) {
+            leveled.forEach(
+                (l) => {
+                    const { tags = '' } = l.dataset;
+                    const tagsSet = new Set(tags.split(','));
+                    const visible = Array.from({ length: threshold + 1 }, (_, index) => index).reduce(
+                        (prev, curr) => {
+                            return prev || tagsSet.has(`level${curr}`);
+                        },
+                        false
+                    );
+                    l.style['display'] = visible ? 'revert' : 'none';
+                }
+            );
+        }
+
+        const slider = document.createElement('input');
+        slider.style['position'] = 'fixed';
+        slider.style['top'] = '0';
+        slider.style['left'] = '0';
+        slider.setAttribute('type', 'range');
+        slider.setAttribute('min', '0');
+        slider.setAttribute('max', '3');
+        slider.setAttribute('value', '0');
+        slider.addEventListener('change',
+            (evt) => {
+                updateView(slider.value);
+            }
+        )
+        body.appendChild(slider);
+
+        updateView(slider.value);
+
+        
+        const graph = new graphology.Graph();
+        graph.import(graphConf);
+        const ex = graph.export();
+
+
+
+        const sigma = new Sigma(graph, document.getElementById("container"));
+
+        const sigmaEvents = new SigmaEvents(sigma);
+        sigmaEvents.edgeReducer = (sigma, edge, data) => {
+            const res = { ...data };
+            if (edge === sigma.currentEdge) res.color = "#cc0000";
+            return res;
+        }
+
+        
+
+        class GraphEditor {
+
+            #state
+            #clicked
+
+            constructor() {
+
+                this.#state = 'edit';
+                this.#clicked = {};
+                attributesForm.addListener(
+                    ({ sender, attr, value }) => {
+                        const { node, edge } = this.#clicked;
+                        if (node) {
+                            graph.setNodeAttribute(node, attr, value);
+                        } else if (edge) {
+                            graph.setEdgeAttribute(edge, attr, value);
+                        }
+                    }
+                );
+            }
+
+
+            get state() { return this.#state; }
+            set state(value) { this.#state = value; this.#setClicked(); }
+
+            onSigmaEvent(s, eventType, evt) {
+
+                switch (eventType) {
+                    case SigmaEvents.clickStage: {
+                        switch (this.state) {
+                            case 'addNode': {
+
+                                const { x, y } = evt.event;
+                                const coords = s.sigma.viewportToGraph({ x, y });
+                                graph.addNode(Utils.generateUUID(), { size: 10, x: coords.x, y: coords.y });
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                    case SigmaEvents.clickNode: {
+
+                        const { node } = evt;
+
+                        switch (this.state) {
+                            case 'removeNode': {
+                                graph.dropNode(node);
+                                break;
+                            }
+                            case 'addEdge': {
+                                if (!this.#clicked.node) {
+                                    this.#setClicked({ node });
+                                } else {
+                                    graph.addEdge(this.#clicked.node, node);
+                                    this.#setClicked();
+                                }
+                                break;
+                            }
+                            case 'edit': {
+
+                                this.#setClicked({ node });
+                                const attributes = graph.getNodeAttributes(node);
+                                attributesForm.setTarget(attributes, ['size', 'color', 'label']);
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                    case SigmaEvents.clickEdge: {
+
+                        const { edge } = evt;
+                        switch (this.state) {
+                            case 'edit': {
+
+                                this.#setClicked({ edge })
+                                const attributes = graph.getEdgeAttributes(edge);
+                                attributesForm.setTarget(attributes, ['size', 'color', 'label']);
+                                break;
+                            }
+                            case 'removeEdge': {
+                                graph.dropEdge(edge);
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+
+            #setClicked({ node, edge } = {}) {
+                this.#clicked = { node, edge };
+            }
+        }
+        const graphEditor = new GraphEditor();
+        sigmaEvents.addListener(SigmaEvents.clickStage, graphEditor.onSigmaEvent.bind(graphEditor));
+        sigmaEvents.addListener(SigmaEvents.clickNode, graphEditor.onSigmaEvent.bind(graphEditor));
+        sigmaEvents.addListener(SigmaEvents.clickEdge, graphEditor.onSigmaEvent.bind(graphEditor));
+        sigmaEvents.addListener(SigmaEvents.enterEdge, () => { });
+        sigmaEvents.addListener(SigmaEvents.leaveEdge, () => { });
+
+
+        const radios = document.querySelectorAll('input[type=radio]');
+        radios.forEach(
+            (r) => {
+                r.addEventListener(
+                    'change',
+                    (evt) => {
+                        if (!r.checked) { return; }
+                        console.log(r);
+                        graphEditor.state = r.value;
+                    }
+                )
+            }
+        );
+
+
+        const saveButton = document.createElement('input');
+        saveButton.setAttribute('type', 'button');
+        saveButton.style['position'] = 'fixed';
+        saveButton.style['right'] = '0';
+        saveButton.style['top'] = '70vh';
+        saveButton.setAttribute('value', 'Guardar');
+
+        saveButton.addEventListener('click',
+            (evt) => {
+                console.log(graph.export());
+            }
+        );
+
+        body.appendChild(saveButton);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/2.4.0/sigma.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/graphology/0.25.4/graphology.umd.min.js"></script>
+
+    <style>
+        [data-tags*="level0"] {
+            color: rgb(0, 0, 0);
+        }
+
+        /* Estilo para los elementos con data-set="1" */
+        [data-tags*="level1"] {
+            color: rgb(107, 107, 107);
+        }
+
+        img {
+            max-height: 40vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container" style="width: 800px; height: 600px; background: #f2f2f2"></div>
+    <fieldset id="state" style="position: fixed; top: 0; right: 0;">
+        <legend>Select a maintenance drone:</legend>
+
+        <div>
+            <input type="radio" id="idle" name="nodes" value="idle" checked />
+            <label for="idle">Idle</label>
+        </div>
+
+        <div>
+            <input type="radio" id="edit" name="nodes" value="edit" />
+            <label for="edit">Edit</label>
+        </div>
+
+        <div>
+            <input type="radio" id="addNode" name="nodes" value="addNode" />
+            <label for="addNode">Add node</label>
+        </div>
+
+        <div>
+            <input type="radio" id="moveNode" name="nodes" value="moveNode" />
+            <label for="moveNode">Move node</label>
+        </div>
+
+        <div>
+            <input type="radio" id="removeNode" name="nodes" value="removeNode" />
+            <label for="removeNode">Remove node</label>
+        </div>
+
+        <div>
+            <input type="radio" id="addEdge" name="nodes" value="addEdge" />
+            <label for="addEdge">Add edge</label>
+        </div>
+
+        <div>
+            <input type="radio" id="removeEdge" name="nodes" value="removeEdge" />
+            <label for="removeEdge">Remove edge</label>
+        </div>
+
+    </fieldset>
+
+
+    <textarea id="inputInfo" style="width: 100%; min-height: 20vh;"></textarea>
+
+    <script type="module">
+
+        import Utils from './js/utils.js';
+        import SigmaEvents from './js/sigmaEvents.js'
+        import GraphEditor from './js/graphEditor.js'
+        import Piece, { printPiece } from './js/piece.js'
+        import AttributesForm from './js/attributes-form.js';
+        import graphConf from './graphConf.js';
+        import info from './info.js';
+        import PieceElement from './js/piece-element.js'
+
+        const body = document.querySelector('body');
+        const attributesForm = document.createElement('attributes-form');
+        attributesForm.style['position'] = 'fixed';
+        attributesForm.style['right'] = '0';
+        attributesForm.style['top'] = '50vh';
+        attributesForm.style['display'] = 'flex';
+        attributesForm.style['flex-direction'] = 'column';
+        body.appendChild(attributesForm);
+
+
+        const piece = Piece.parse(info); console.log(piece);
+        const pieceElement = document.createElement('piece-element');
+        pieceElement.piece = piece;
+        body.appendChild(pieceElement);
+
+        function updateView(level) {
+            pieceElement.setFilter({ level });
+        }
+
+        const slider = document.createElement('input');
+        slider.style['position'] = 'fixed';
+        slider.style['top'] = '0';
+        slider.style['left'] = '0';
+        slider.setAttribute('type', 'range');
+        slider.setAttribute('min', '0');
+        slider.setAttribute('max', '3');
+        slider.setAttribute('value', '0');
+        slider.addEventListener('change',
+            (evt) => {
+                updateView(slider.value);
+            }
+        )
+        body.appendChild(slider);
+
+        updateView(slider.value);
+
+
+        const graph = new graphology.Graph();
+        graph.import(graphConf);
+
+        const sigma = new Sigma(graph, document.getElementById("container"));
+
+        const sigmaEvents = new SigmaEvents(sigma);
+        const graphEditor = new GraphEditor(graph, sigmaEvents);
+
+        sigmaEvents.edgeReducer = (sigma, edge, data) => {
+            const res = { ...data };
+            if (edge === sigma.currentEdge) res.color = "#cc0000";
+            return res;
+        }
+
+        sigmaEvents.nodeReducer = (sigma, node, data) => {
+            const res = { ...data };
+            // if (node === sigma.currentNode) res.color = "#cc0000";
+            if (graphEditor.isNodeSelected(node)) { res.color = "#cc0000"; }
+            return res;
+        }
+
+
+        sigmaEvents.addListener(SigmaEvents.clickNode,
+            (s, eventType, evt) => {
+                switch (graphEditor.state) {
+                    case GraphEditor.STATES.edit: {
+                        const { node } = evt;
+                        const attributes = graph.getNodeAttributes(node);
+                        attributesForm.setTarget(node, attributes, ['size', 'color', 'label']);
+                        break;
+                    }
+                    case GraphEditor.STATES.idle: {
+
+                        const { node } = evt;
+                        const { label } = graph.getNodeAttributes(node);
+
+                        pieceElement.setFilter({ filter: graphEditor.selected });
+
+                        break;
+                    }
+                }
+                if (graphEditor.state !== GraphEditor.STATES.edit) { return; }
+
+            });
+        sigmaEvents.addListener(SigmaEvents.clickEdge,
+            (s, eventType, evt) => {
+                if (graphEditor.state !== GraphEditor.STATES.edit) { return; }
+                const { edge } = evt;
+                const attributes = graph.getEdgeAttributes(edge);
+                attributesForm.setTarget(edge, attributes, ['size', 'color', 'label']);
+            });
+        attributesForm.addListener(
+            ({ sender, attr, value }) => {
+                graphEditor.setAttribute(attr, value);
+            }
+        );
+
+        const radios = document.querySelectorAll('input[type=radio]');
+        radios.forEach(
+            (r) => {
+                r.addEventListener(
+                    'change',
+                    (evt) => {
+                        if (!r.checked) { return; }
+                        console.log(r);
+                        graphEditor.state = r.value;
+                    }
+                )
+            }
+        );
+
+
+        const saveButton = document.createElement('input');
+        saveButton.setAttribute('type', 'button');
+        saveButton.style['position'] = 'fixed';
+        saveButton.style['right'] = '0';
+        saveButton.style['top'] = '70vh';
+        saveButton.setAttribute('value', 'Guardar');
+
+        saveButton.addEventListener('click',
+            (evt) => {
+                console.log(graph.export());
+            }
+        );
+
+        body.appendChild(saveButton);
+
+
+        const inputInfo = document.querySelector('#inputInfo');
+        inputInfo.value = info.info;
+        inputInfo.addEventListener('change',
+            (evt) => {
+                const info = {
+                    info: inputInfo.value,
+                    tags: [],
+                    pieces: []
+                };
+
+                let depth = 0;
+                const infoStack = [info];
+                inputInfo.value.split('\n').forEach(
+                    (l) => {
+                        const matchTabs = l.match(/^(\.*)(.+)/);
+                        if (!matchTabs) { return; }
+                        const newDepth = matchTabs[1].length + 1;
+                        const content = matchTabs[2];
+
+                        while (newDepth < infoStack.length) {
+                            infoStack.pop();
+                        }
+
+                        const sepIndex = content.indexOf(':');
+                        const [pref, suff] = [content.substring(0, sepIndex), content.substring(sepIndex + 1)];
+                        console.log({ pref, suff });
+
+                        const tags = pref ? pref.split(',') : [];
+                        const onlyDigits = elemento => /^\d+$/.test(elemento);
+
+                        const { digits,  othertTags } = tags.reduce((prev, curr) => {
+                            if (onlyDigits(curr)) {
+                                prev.digits.push(curr);
+                            } else {
+                                prev.othertTags.push(curr);
+                            }
+                            return prev;
+                        }, { digits: [], othertTags: [] });
+
+                        const newPiece = {
+                            info: suff,
+                            tags: othertTags,
+                            level : (digits.length > 0) ? +digits[0] : 0,
+                            pieces: [],
+                        };
+                        infoStack[infoStack.length - 1].pieces.push(newPiece);
+                        infoStack.push(newPiece);
+
+                    }
+                );
+                console.log(info);
+            }
+        );
+
+    </script>
+</body>
+
+</html>
