@@ -1,0 +1,13 @@
+
+[data-level*="0"] {
+    color: rgb(0, 0, 0);
+}
+
+/* Estilo para los elementos con data-set="1" */
+[data-level*="1"] {
+    color: rgb(107, 107, 107);
+}
+
+img {
+    max-height: 40vh;
+}

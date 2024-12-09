@@ -1,34 +1,99 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Quick Sigma.js Example</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/2.4.0/sigma.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/graphology/0.25.4/graphology.umd.min.js"></script>
-  </head>
-  <body style="background: lightgrey">
-    <div id="container" style="width: 800px; height: 600px; background: white"></div>
-    <script>
-        const knowledge = [
-            {
-                'id' : 'hitory', 
-                'title' : 'Historia',
-                'paragraphs' : [
-                    {
-                        'content' : 'Nació en 31 de agosto de 1870',
-                        'labels' : ['Level1']
-                    }
-                ]
-            }
-        ];
-      // Create a graphology graph
-      const graph = new graphology.Graph();
-      graph.addNode("1", { label: "Node 1", x: 0, y: 0, size: 10, color: "blue" });
-      graph.addNode("2", { label: "Node 2", x: 1, y: 1, size: 20, color: "red" });
-      graph.addEdge("1", "2", { size: 5, color: "purple" });
 
-      // Instantiate sigma.js and render the graph
-      const sigmaInstance = new Sigma(graph, document.getElementById("container"));
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+
+    <div id="container" style="width: 800px; height: 600px; background: #f2f2f2"></div>
+
+
+    <script type="module">
+
+        import Utils from './js/utils.js';
+        import SigmaEvents from './js/sigmaEvents.js';
+        import GraphEditor from './js/graphEditor.js';
+        import Piece, { printPiece } from './js/piece.js';
+        import graphConf from './graphConf.js';
+        import info from './info.js';
+        import PieceElement from './js/piece-element.js';
+        
+        const body = document.querySelector('body');
+
+
+        const piece = Piece.parse(info); console.log(piece);
+        const pieceElement = document.createElement('piece-element');
+        pieceElement.piece = piece.pieces[0];
+        body.appendChild(pieceElement);
+
+        function updateView(level) {
+            pieceElement.setFilter({ level });
+        }
+
+        const slider = document.createElement('input');
+        slider.style['position'] = 'fixed';
+        slider.style['top'] = '0';
+        slider.style['left'] = '0';
+        slider.setAttribute('type', 'range');
+        slider.setAttribute('min', '0');
+        slider.setAttribute('max', '3');
+        slider.setAttribute('value', '0');
+        slider.addEventListener('change',
+            (evt) => {
+                updateView(slider.value);
+            }
+        )
+        body.appendChild(slider);
+
+        updateView(slider.value);
+
+
+        const graph = new graphology.Graph();
+        graph.import(graphConf);
+
+        const sigma = new Sigma(graph, document.getElementById("container"));
+
+        const sigmaEvents = new SigmaEvents(sigma);
+        const graphEditor = new GraphEditor(graph, sigmaEvents);
+
+        sigmaEvents.edgeReducer = (sigma, edge, data) => {
+            const res = { ...data };
+            if (edge === sigma.currentEdge) res.color = "#cc0000";
+            return res;
+        }
+
+        sigmaEvents.nodeReducer = (sigma, node, data) => {
+            const res = { ...data };
+            // if (node === sigma.currentNode) res.color = "#cc0000";
+            if (graphEditor.isNodeSelected(node)) { res.color = "#cc0000"; }
+            return res;
+        }
+
+
+        sigmaEvents.addListener(SigmaEvents.clickNode,
+            (s, eventType, evt) => {
+                switch (graphEditor.state) {
+                    case GraphEditor.STATES.idle: {
+
+                        const { node } = evt;
+                        const { label } = graph.getNodeAttributes(node);
+
+                        pieceElement.setFilter({ filter: graphEditor.selected });
+
+                        break;
+                    }
+                }
+            });
+
     </script>
-  </body>
+</body>
+
 </html>

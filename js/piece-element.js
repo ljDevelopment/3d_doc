@@ -137,6 +137,7 @@ export default class PieceElement extends HTMLElement {
             }
         }
 
+        element.setAttribute('data-level', this.piece.level);
         if (this.piece.tags.length) {
             element.setAttribute('data-tags', this.piece.tags.join(','));
         }
