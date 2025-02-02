@@ -1,6 +1,51 @@
 const info =
+// {
+//     "info": "Prueba\n.list:\n..uno\n..dos\n..tres\n.Fin de la lista",
+//     "tags": [],
+//     "pieces": [
+//         {
+//             "info": "Prueba",
+//             "tags": [],
+//             "level": 0,
+//             "pieces": [
+//                 {
+//                     "info": "",
+//                     "type": "list",
+//                     "tags": [],
+//                     "level": 0,
+//                     "pieces": [
+//                         {
+//                             "info": "uno",
+//                             "tags": [],
+//                             "level": 1,
+//                             "pieces": []
+//                         },
+//                         {
+//                             "info": "dos",
+//                             "tags": [],
+//                             "level": 1,
+//                             "pieces": []
+//                         },
+//                         {
+//                             "info": "tres",
+//                             "tags": [],
+//                             "level": 0,
+//                             "pieces": []
+//                         }
+//                     ]
+//                 },
+//                 {
+//                     "info": "Fin de la lista",
+//                     "tags": [],
+//                     "level": 0,
+//                     "pieces": []
+//                 }
+//             ]
+//         }
+//     ]
+// };
 {
-    "info": "Eneagramas\n.1:Historia\n..1:9 puntas\n..1:Cristianismo Evadrius Ponticus, siglo IV\n..1:Juadismo, Sufismo, Taoismo.\n..1:Oscar Hichazo\n..1:Claudio Naranjo\n..1:Padre Robert Ox\n.Eneagrama\n..Tríada de la tripa\n...Unidas por la ira.\n...8, desafiante\n....Desafiante\n....Cabecillas naturales\n....Punto débil, incapacidad para mostrar vulnerabilidad. \n....Le impide entablar relaciones realmente significativas.\n....Demuestra ira buscando el conflicto verbal o físico.\n....:Pecado capital: lujuria\n...9, pacificador\n....Evitan conflicto. Amable, mediador natural.\n....Para no disgustar, reprimen sus ansiedades y frustraciones, no obtienen lo que necesitan de las relaciones.\n....:Pecado capital: pereza\n...1, perfeccionista\n....Autodisciplinados, morales y se preocupan por lo detalles.\n....Merarse a sí mismo es su principal precupación.\n....Blanco o negro, se enfadan si se incumplen normas o abandonan responsabilidades.\n....La ira se interioriza en forma de resentimiento.\n....:Pecado capital: resentimiento\n..Tríada del corazón\n...Definida por sus sentimientos y emociones.\n...2, ayudante\n....Deseo de sentirse necesidado.\n....Las relaciones le definen y evitan expresar sus propias necesidades.\n....Los demás les deben algo.\n....Atienden los sentimientos de los demás, menos los suyos propios.\n....:Pecado capital: orgullo\n...3, ejecutante\n....Grandes objteivos y gran satisfacción al alcanzarlos.\n....A más existosos, productovos y eficientes, mayor su autoestima.\n....Autoengaño, incapacidad de asumir errores.\n....Les cuesta identificar las emociones en sí mismos y en los demás.\n....:Pecado capital: engaño\n...4, romántico\n....Sintonía con la belleza y tragedia del mundo, aprecian el expectro de la experiencia humana.\n....Tienden a aislarse, melancolía, imprevisibilidad y ensimismamiento.\n....:Pecado capital: envidia\n..Tríada de la cabeza\n...Unida por el miedo.\n...5, investigador\n....Placer al compartir su riqueza de conocmiento.\n....Independientes, opiniones lógicas y objetivas.\n....MIedo a depender de los demás, actitud defensiva, tendencia al cinismo y a juzgar a los demás.\n....:Pecado capital: avaricia\n...6, lealista\n....Servir a su familia y comunidad.\n....Seguros con normas y orden, buscando seguridad y estabilidad.\n....Miedo a perder esta seguridad.\n....Ansiedades y paranoias.\n....Cualquier temor es una crisis.\n....:Pecado capital: miedo\n...7, entusiasta\n....Alma de la fiesta, optimistas.\n....Popular.\n....Les cuesta comprometerse.\n....Persiguen el placer para escapar de cualquier emoción negativa, susceptibles a la adicción.\n....Miedo a las emociones negativas, llenan sus agendas deactos sociales y bienes meteriales.\n....:Pecado capital: glotonería\n.Alas\n..Uno de los tipos de izquierda o derecha refuerza algunas características de tu personaldad.\n..Se denominan 0W# (0 es el tipo principal, # el ala)\n.Número de seguridad\n..Cuando te sientes seguro, protegido, aporta características positivas.\n.Número de estrés\n..Cuando las cosas no van bien, adoptan los rasgos negativos del núero de estrés.\n.Pecado capital\n..Motivación negativa",
+    "info": "Eneagramas\n.Historia\n..9 puntas\n..Cristianismo Evadrius Ponticus, siglo IV\n..Juadismo, Sufismo, Taoismo.\n..Oscar Hichazo\n..Claudio Naranjo\n..Padre Robert Ox\n.Eneagrama\n..Tríada de la tripa\n...Unidas por la ira.\n...8, desafiante\n....Desafiante\n....Cabecillas naturales\n....Punto débil, incapacidad para mostrar vulnerabilidad. \n....Le impide entablar relaciones realmente significativas.\n....Demuestra ira buscando el conflicto verbal o físico.\n....:Pecado capital: lujuria\n...9, pacificador\n....Evitan conflicto. Amable, mediador natural.\n....Para no disgustar, reprimen sus ansiedades y frustraciones, no obtienen lo que necesitan de las relaciones.\n....:Pecado capital: pereza\n...1, perfeccionista\n....Autodisciplinados, morales y se preocupan por lo detalles.\n....Merarse a sí mismo es su principal precupación.\n....Blanco o negro, se enfadan si se incumplen normas o abandonan responsabilidades.\n....La ira se interioriza en forma de resentimiento.\n....:Pecado capital: resentimiento\n..Tríada del corazón\n...Definida por sus sentimientos y emociones.\n...2, el ayudante\n....Deseo de sentirse necesidado.\n....Las relaciones le definen y evitan expresar sus propias necesidades.\n....Los demás les deben algo.\n....Atienden los sentimientos de los demás, menos los suyos propios.\n....:Pecado capital: orgullo\n...3, el ejecutante\n....Grandes objteivos y gran satisfacción al alcanzarlos.\n....A más existosos, productovos y eficientes, mayor su autoestima.\n....Autoengaño, incapacidad de asumir errores.\n....Les cuesta identificar las emociones en sí mismos y en los demás.\n....:Pecado capital: engaño\n...4, el romático\n....Sintonía con la belleza y tragedia del mundo, aprecian el expectro de la experiencia humana.\n....Tienden a aislarse, melancolía, imprevisibilidad y ensimismamiento.\n....:Pecado capital: envidia\n..Tríada de la cabeza\n...Unida por el miedo.\n...5, investigador\n....Placer al compartir su riqueza de conocmiento.\n....Independientes, opiniones lógicas y objetivas.\n....MIedo a depender de los demás, actitud defensiva, tendencia al cinismo y a juzgar a los demás.\n....:Pecado capital: avaricia\n...6, el lealista\n....Servir a su familia y comunidad.\n....Seguros con normas y orden, buscando seguridad y estabilidad.\n....Miedo a perder esta seguridad.\n....Ansiedades y paranoias.\n....Cualquier temor es una crisis.\n....:Pecado capital: miedo\n...7, el entusiasta\n....Alma de la fiesta, optimistas.\n....Popular.\n....Les cuesta comprometerse.\n....Persiguen el placer para escapar de cualquier emoción negativa, susceptibles a la adicción.\n....Miedo a las emociones negativas, llenan sus agendas deactos sociales y bienes meteriales.\n....:Pecado capital: glotonería\n.Alas\n..Uno de los tipos de izquierda o derecha refuerza algunas características de tu personaldad.\n..Se denominan 0W# (0 es el tipo principal, # el ala)\n.Número de seguridad\n..Cuando te sientes seguro, protegido, aporta características positivas.\n.Número de estrés\n..Cuando las cosas no van bien, adoptan los rasgos negativos del núero de estrés.\n.Pecado capital\n..Motivación negativa",
     "tags": [],
     "pieces": [
         {
@@ -11,42 +56,42 @@ const info =
                 {
                     "info": "Historia",
                     "tags": [],
-                    "level": 1,
+                    "level": 0,
                     "pieces": [
                         {
                             "info": "9 puntas",
                             "tags": [],
-                            "level": 1,
+                            "level": 0,
                             "pieces": []
                         },
                         {
                             "info": "Cristianismo Evadrius Ponticus, siglo IV",
                             "tags": [],
-                            "level": 1,
+                            "level": 0,
                             "pieces": []
                         },
                         {
                             "info": "Juadismo, Sufismo, Taoismo.",
                             "tags": [],
-                            "level": 1,
+                            "level": 0,
                             "pieces": []
                         },
                         {
                             "info": "Oscar Hichazo",
                             "tags": [],
-                            "level": 1,
+                            "level": 0,
                             "pieces": []
                         },
                         {
                             "info": "Claudio Naranjo",
                             "tags": [],
-                            "level": 1,
+                            "level": 0,
                             "pieces": []
                         },
                         {
                             "info": "Padre Robert Ox",
                             "tags": [],
-                            "level": 1,
+                            "level": 0,
                             "pieces": []
                         }
                     ]
@@ -186,7 +231,7 @@ const info =
                                     "pieces": []
                                 },
                                 {
-                                    "info": "2, ayudante",
+                                    "info": "2, el ayudante",
                                     "tags": [],
                                     "level": 0,
                                     "pieces": [
@@ -223,7 +268,7 @@ const info =
                                     ]
                                 },
                                 {
-                                    "info": "3, ejecutante",
+                                    "info": "3, el ejecutante",
                                     "tags": [],
                                     "level": 0,
                                     "pieces": [
@@ -260,7 +305,7 @@ const info =
                                     ]
                                 },
                                 {
-                                    "info": "4, romántico",
+                                    "info": "4, el romático",
                                     "tags": [],
                                     "level": 0,
                                     "pieces": [
@@ -329,7 +374,7 @@ const info =
                                     ]
                                 },
                                 {
-                                    "info": "6, lealista",
+                                    "info": "6, el lealista",
                                     "tags": [],
                                     "level": 0,
                                     "pieces": [
@@ -372,7 +417,7 @@ const info =
                                     ]
                                 },
                                 {
-                                    "info": "7, entusiasta",
+                                    "info": "7, el entusiasta",
                                     "tags": [],
                                     "level": 0,
                                     "pieces": [
@@ -479,7 +524,7 @@ const info =
             ]
         }
     ]
-}
+};
 // {
 //     'info': 'Metodología Montessori',
 //     'level': 0,
@@ -574,7 +619,7 @@ const info =
 //             ]
 //         }
 //     ]
-// }
+// };
 // {
 //     "info": "0:Metodología Montessori\n.0:Etapas del desarrollo\n..0-6, embrión psíquico/espiritual\n...1:0-3\n...1:3-6",
 //     "tags": [],

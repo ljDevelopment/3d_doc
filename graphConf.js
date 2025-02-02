@@ -103,7 +103,7 @@ const graphConf =
                 "size": 10,
                 "x": 0.28454188430830646,
                 "y": 0.7450888325160717,
-                "label": "6, lealista"
+                "label": "6, el lealista"
             }
         },
         {

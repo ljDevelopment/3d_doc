@@ -138,10 +138,13 @@
                     }
                     case GraphEditor.STATES.idle: {
 
-                        const { node } = evt;
-                        const { label } = graph.getNodeAttributes(node);
+                        const labels = graphEditor.selected.map(
+                            (n) => {
+                                return n.attributes.label;
+                            }
+                        );
 
-                        pieceElement.setFilter({ filter: graphEditor.selected });
+                        pieceElement.setFilter({ labels });
 
                         break;
                     }
