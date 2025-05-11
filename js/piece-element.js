@@ -18,6 +18,7 @@ export default class PieceElement extends HTMLElement {
 
     get piece() { return this.#piece; }
     set piece(value) { this.#piece = value; }
+    setPiece(value) { this.piece = value; this.#render(); }
     setFilter({labels, tags, level, parentVisibleByLabel = false} = {}) {
         if (undefined !== labels) { this.#labels = labels; }
         if (undefined !== tags) { this.#tags = tags; }
@@ -62,6 +63,13 @@ export default class PieceElement extends HTMLElement {
     connectedCallback() {
         this.#render();
         console.log(this, this.piece);
+
+        this.addEventListener('click',
+            (evt) => {
+                evt.stopPropagation();
+                document.dispatchEvent(new CustomEvent('piece-element.click', {detail : this}));
+            }
+        )
     }
 
     disconnectedCallback() {
@@ -77,8 +85,6 @@ export default class PieceElement extends HTMLElement {
     #render() {
         this.innerHTML = '';
         if (!this.piece) { return; }
-
-        this.#renderPiece(this.piece, this);
 
         let element = null;
         switch (this.piece.type) {
@@ -143,11 +149,6 @@ export default class PieceElement extends HTMLElement {
         }
     }
 
-
-    #renderPiece(piece, parent, leve = 0) {
-
-    }
-    
 }
 
 customElements.define('piece-element', PieceElement);

@@ -32,6 +32,13 @@ export default class GraphEditor {
         sigmaEvents.addListener(SigmaEvents.clickEdge, this.#onSigmaEvent.bind(this));
     }
 
+    addNode({x = 0, y = 0, size = 10, label = null} = {}) {
+
+        const node = Utils.generateUUID();
+        const coords = this.#sigmaEvents.sigma.viewportToGraph({ x, y });
+        this.#graph.addNode(node, { size, x: coords.x, y: coords.y, label });
+        return node;
+    }
 
     get state() { return this.#state; }
     set state(value) { this.#state = value; this.#setClicked(); }
@@ -69,8 +76,7 @@ export default class GraphEditor {
                     case GraphEditor.STATES.addNode: {
 
                         const { x, y } = evt.event;
-                        const coords = s.sigma.viewportToGraph({ x, y });
-                        this.#graph.addNode(Utils.generateUUID(), { size: 10, x: coords.x, y: coords.y });
+                        this.addNode({ size: 10, x, y });
                         break;
                     }
                     case GraphEditor.STATES.moveNode: {
