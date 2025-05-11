@@ -1,0 +1,74 @@
+digraph GuiaScrum {
+	rankdir=LR size=10
+	SCRUM [fillcolor=lightblue shape=box style=filled]
+	Fundamentos [shape=box]
+	SCRUM -> Fundamentos
+	"Roles Scrum" [shape=box]
+	SCRUM -> "Roles Scrum"
+	Artefactos [shape=box]
+	SCRUM -> Artefactos
+	"Eventos Scrum" [shape=box]
+	SCRUM -> "Eventos Scrum"
+	"Definición" [label="Definición:
+Marco ágil para resolver problemas complejos"]
+	Fundamentos -> "Definición"
+	Basado [label="Basado en"]
+	Fundamentos -> Basado
+	Empirismo [label=Empirismo]
+	Basado -> Empirismo
+	Lean [label="Pensamiento lean"]
+	Basado -> Lean
+	Pilares [label=Pilares]
+	Fundamentos -> Pilares
+	Transparencia [label=Transparencia]
+	Pilares -> Transparencia
+	"Inspección" [label="Inspección"]
+	Pilares -> "Inspección"
+	"Adaptación" [label="Adaptación"]
+	Pilares -> "Adaptación"
+	Valores [label=Valores]
+	Fundamentos -> Valores
+	Compromiso [label=Compromiso]
+	Valores -> Compromiso
+	Coraje [label=Coraje]
+	Valores -> Coraje
+	Enfoque [label=Enfoque]
+	Valores -> Enfoque
+	Apertura [label=Apertura]
+	Valores -> Apertura
+	Respeto [label=Respeto]
+	Valores -> Respeto
+	ScrumMaster [label="Scrum Master:
+Facilita, elimina impedimentos"]
+	ProductOwner [label="Product Owner:
+Gestiona el Product Backlog"]
+	Developers [label="Developers:
+Crean Incrementos de valor"]
+	"Roles Scrum" -> ScrumMaster
+	"Roles Scrum" -> ProductOwner
+	"Roles Scrum" -> Developers
+	ProductBacklog [label="Product Backlog:
+Lista ordenada de necesidades"]
+	SprintBacklog [label="Sprint Backlog:
+Plan del Sprint y Objetivo"]
+	Incremento [label="Incremento:
+Resultado usable y completo"]
+	Artefactos -> ProductBacklog
+	Artefactos -> SprintBacklog
+	Artefactos -> Incremento
+	Sprint [label="Sprint:
+Duración máx. 1 mes"]
+	Planning [label="Sprint Planning:
+Qué, cómo y quién"]
+	Daily [label="Daily Scrum:
+Reunión diaria (15 min)"]
+	Review [label="Sprint Review:
+Revisión con stakeholders"]
+	Retro [label="Sprint Retrospective:
+Mejora continua"]
+	"Eventos Scrum" -> Sprint
+	"Eventos Scrum" -> Planning
+	"Eventos Scrum" -> Daily
+	"Eventos Scrum" -> Review
+	"Eventos Scrum" -> Retro
+}

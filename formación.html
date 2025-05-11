@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scroll automático al pasar el 50%</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Courier New', Courier, monospace;
+            color: aliceblue;
+        }
+
+        body {
+            /* background-image: url("./img/pixels.jpg"); */
+            background: linear-gradient(to right, #3131ff 0%, #5656ff 15%, #5656ff 85%, #3131ff 100%);
+            margin: 0;
+        }
+
+
+        section {
+            position: relative;
+            height: 100vh;
+            /* Cada sección ocupa la altura completa de la ventana */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #ccc;
+            background: radial-gradient(circle at 0% 0%, black, transparent 80%);
+            padding: 0 2rem;
+        }
+
+        .middle_screen {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .centered {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section id="sect1">
+
+            <div class="middle_screen">
+                <div class="centered">
+                    <h1>FORMACIÓN / CONSULTORÍA</h1>
+                    <div>Transformación ágil en constante evolución</div>
+                </div>
+            </div>
+        </section>
+        <section id="sect2">
+            <div>
+                <h1>¿QUÉ NECESITAS?</h1>
+                <div>
+                    <ul>
+                        <li>
+                            <h2>Capacidad de pivotaje y adaptación al cambio:</h2>
+                            <p>La naturaleza iterativa de las metodologías ágiles permite ajustar rápidamente las
+                                estrategias en
+                                función de los feedbacks y las nuevas circunstancias del mercado. Esta flexibilidad
+                                asegura que el
+                                equipo pueda reorientar prioridades y modificar el rumbo del proyecto sin comprometer la
+                                calidad o la
+                                entrega de valor.</p>
+                        </li>
+
+                        <li>
+                            <h2>Orden y control del caos</h2>
+                            <p>Las metodologías ágiles estructuran el trabajo en ciclos breves y repetitivos, lo que
+                                ayuda a
+                                organizar tareas y priorizar actividades de forma clara. Este enfoque sistemático reduce
+                                la
+                                incertidumbre, permitiendo que el equipo mantenga el control sobre un entorno que, en
+                                apariencia, puede parecer caótico.</p>
+                        </li>
+
+                        <li>
+                            <h2>Visibilidad de los procesos</h2>
+                            <p>El uso de herramientas de seguimiento, reuniones periódicas y revisiones de avance
+                                proporciona una
+                                visión transparente de cada etapa del proyecto. Esto facilita la identificación temprana
+                                de problemas y
+                                la toma de decisiones informadas, asegurando que todos los miembros del equipo estén
+                                alineados con los
+                                objetivos y el progreso.</p>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Orden</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$0<small
+                                    class="text-body-secondary fw-light">/mo</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>10 users included</li>
+                                <li>2 GB of storage</li>
+                                <li>Email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Visibilidad</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$15<small
+                                    class="text-body-secondary fw-light">/mo</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>20 users included</li>
+                                <li>10 GB of storage</li>
+                                <li>Priority email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                        <div class="card-header py-3 text-bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">Pivotaje</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$29<small
+                                    class="text-body-secondary fw-light">/mo</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>30 users included</li>
+                                <li>15 GB of storage</li>
+                                <li>Phone and email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            </div>
+        </section>
+        <section id="sect3">
+            <div class="middle_screen">
+                <div>
+                    <h1>PRESENTACIÓN</h1>
+                    <div>Mi nombre es Luis Javier López Ingeniero Superior
+                        en Informática desde 2005. Descubrí SCRUM en 2006
+                        a través de la obra “SCRUM y XP desde las trincheras”
+                        de Henrik Kniberg, experiencia que me impulsó a
+                        trabajar con metodologías ágiles en startups y
+                        multinacionales. Desde entonces, he ejercido como
+                        SCRUM Master y he impartido formaciones a nivel
+                        universitario y a emprendedores, acumulando más
+                        de 20 años de experiencia en el sector de la
+                        tecnología y la gestión de proyectos</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sect4">
+
+            <div class="middle_screen">
+                <div>
+                    <h1>¿Por qué esta formación?</h1>
+                    <div>La adopción de SCRUM permite a los equipos
+                        mejorar la comunicación, acortar los ciclos de
+                        entrega, incrementar la satisfacción del cliente y
+                        fomentar la mejora continua. Con esta
+                        propuesta formativa, busco compartir los
+                        aprendizajes y las mejores prácticas que he
+                        recogido a lo largo de mi trayectoria, ayudando a
+                        los equipos a enfrentarse a los retos del día a
+                        día de manera ágil y eficiente.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sect5">
+
+            <div class="middle_screen">
+                <div>
+                    <h1>OBJETIVOS</h1>
+                    <div>
+                        <p>El principal objetivo de esta formación en SCRUM es proporcionar a los participantes los
+                            conocimientos,
+                            habilidades y herramientas necesarias para adoptar e implementar con éxito esta metodología
+                            en sus proyectos.
+                            Al finalizar la formación, los participantes podrán:.</p>
+                        <ul>
+                            <li>Comprender y aplicar los principios y valores de SCRUM.</li>
+                            <li>Definir roles y responsabilidades de manera clara, favoreciendo la colaboración dentro
+                                del equipo.</li>
+                            <li>Optimizar la planificación, estimación y ejecución de proyectos.</li>
+                            <li>Emplear herramientas ágiles (como JIRA) de forma efectiva.</li>
+                            <li>Escalar la metodología en equipos de mayor tamaño con modelos de referencia (Nexus,
+                                SAFe, Spotify).</li>
+                            <li>Crear una cultura de mejora continua, optimizando los resultados y la satisfacción tanto
+                                del equipo como de
+                                los stakeholders</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sect6">
+
+            <div class="middle_screen">
+                <div>
+                    <h1>Estructura de la formación</h1>
+                    <ol>
+                        <li>
+                            Toma de contacto. Reunión inicial para:
+                            <ul>
+                                <li>Conocer la composición del equipo, roles y
+                                    responsabilidades.</li>
+                                <li>Evaluar el nivel actual de implantación de SCRUM.</li>
+                                <li>Definir los objetivos concretos de la formación.</li>
+                                <li>Determinar los participantes y resolver dudas iniciales.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Modulo introductorio (1 hora y media):
+                            <ul>
+                                <li>Módulo obligatorio que aborda los fundamentos de
+                                    SCRUM.</li>
+                                <li>Ideal para quienes no tienen experiencia previa o
+                                    desean repasar la base de la guía oficial 2020.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Módulos extras (cada uno de 1 hora y media):
+                            <ul>
+                                <li>Seleccionables según las necesidades de la organización y/o el nivel de profundidad
+                                    requerido.</li>
+                                <li>Ejemplos de módulos disponibles:
+                                    <ul>
+                                        <li>Empirismo y estimación</li>
+                                        <li>Product owner</li>
+                                        <li>JIRA</li>
+                                        <li>Artefactos y eventos</li>
+                                        <li>Escalado</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="sect7">
+            <div>
+                <div>
+                    <h1>Descripción de los módulos</h1>
+                    <h2>Introducción a SCRUM</h2>
+                    <h3>Objetivos del aprendizaje</h3>
+                    <ul>
+                        <li>Comprender los fundamentos de SCRUM.</li>
+                        <li>Identificar los principios y valores de SCRUM.</li>
+                        <li>Definir roles y responsabilidades.</li>
+                        <li>Aplicar SCRUM en proyectos.</li>
+                    </ul>
+                    <h3>Contenidos</h3>
+                    <ul>
+                        <li>Introducción a SCRUM</li>
+                        <li>Principios y valores</li>
+                        <li>Roles y responsabilidades</li>
+                        <li>Eventos y artefactos</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="sect8">
+            <div>
+                <div>
+                    <h1>Descripción de los módulos</h1>
+                    <h2>Empirismo y estimación</h2>
+                    <h3>Objetivos del aprendizaje</h3>
+                    <ul>
+                        <li>Comprender la base empírica de SCRUM para la toma de
+                            decisiones.</li>
+                        <li>Aprender a definir KPIs (Key Performance Indicators) que reflejen
+                            el desempeño y la evolución.</li>
+                        <li>Conocer métodos de estimación (póquer de planificación, t-shirt
+                            sizing, etc.) que faciliten la planificación.</li>
+                    </ul>
+                    <h3>Contenidos</h3>
+                    <ul>
+                        <li>Datos y métricas relevantes para la gestión ágil de proyectos.</li>
+                        <li>Ciclo de inspección y adaptación.</li>
+                        <li>Herramientas y buenas prácticas para la estimación realista del
+                            trabajo.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="sect9">
+            <div>
+                <div>
+                    <h1>Descripción de los módulos</h1>
+                    <h2>Product Owner</h2>
+                    <h3>Objetivos del aprendizaje</h3>
+                    <ul>
+                        <li>Profundizar en el rol de Product Owner y sus responsabilidades.</li>
+                        <li>Aprender a priorizar y gestionar el Product Backlog de manera
+                            efectiva.</li>
+                        <li>Facilitar la comunicación con stakeholders y el equipo,
+                            maximizando el valor del producto.</li>
+                    </ul>
+                    <h3>Contenidos</h3>
+                    <ul>
+                        <li>Habilidades clave: visión de producto, comunicación, liderazgo.</li>
+                        <li>Técnicas de priorización (MoSCoW, Story Mapping, WSJF, etc.).</li>
+                        <li>Gestión de expectativas y validación continua con los usuarios.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="sect10">
+            <div>
+                <div>
+                    <h1>Descripción de los módulos</h1>
+                    <h2>JIRA</h2>
+                    <h3>Objetivos del aprendizaje</h3>
+                    <ul>
+                        <li>Conocer las funcionalidades básicas y avanzadas de JIRA en
+                            entornos ágiles.</li>
+                        <li>Configurar tableros SCRUM, flujos de trabajo y métricas.</li>
+                        <li>Implementar buenas prácticas de seguimiento y reporting con
+                            JIRA.</li>
+                    </ul>
+                    <h3>Contenidos</h3>
+                    <ul>
+                        <li>Setup inicial: proyectos, configuraciones y tableros.</li>
+                        <li>Creación y gestión de épicas, historias de usuario y tareas.</li>
+                        <li>Informes y paneles para medición de velocidad, burndown charts
+                            y más.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="sect11">
+            <div>
+                <div>
+                    <h1>Descripción de los módulos</h1>
+                    <h2>Artefactos y eventos</h2>
+                    <h3>Objetivos del aprendizaje</h3>
+                    <ul>
+                        <li>Profundizar en el uso de los artefactos (Product Backlog, Sprint
+                            Backlog, Incremento) y su relación con la transparencia.</li>
+                        <li>Optimizar cada uno de los eventos de SCRUM, maximizando la
+                            colaboración y la mejora continua.</li>
+                    </ul>
+                    <h3>Contenidos</h3>
+                    <ul>
+                        <li>Cómo preparar y mantener product backlog y sprint backlog.</li>
+                        <li>Cómo preparar y mantener product backlog y sprint backlog.</li>
+                        <li>Ejemplos de dinámicas y ejercicios para sacar el máximo
+                            provecho de cada evento.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="sect12">
+            <div>
+                <div>
+                    <h1>Descripción de los módulos</h1>
+                    <h2>Escalado</h2>
+                    <h3>Objetivos del aprendizaje</h3>
+                    <ul>
+                        <li>Entender los retos y complejidades de escalar SCRUM cuando los
+                            equipos crecen (50, 100 o más miembros).</li>
+                        <li>Conocer los modelos de escalado más populares (Nexus, SAFe,
+                            Spotify) y sus principios básicos.</li>
+                        <li>Identificar buenas prácticas para la coordinación y
+                            sincronización entre múltiples equipos.</li>
+                    </ul>
+                    <h3>Contenidos</h3>
+                    <ul>
+                        <li>Principales problemas al escalar: dependencias, coordinación y
+                            cultura.</li>
+                        <li>Modelos de referencia: comparativa y casos de uso.</li>
+                        <li>Plan de acción para iniciar un proceso de escalado exitoso.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="sect13">
+            <div>
+                <div>
+                    <h1>Medología</h1>
+                    <p>Formato: La formación puede realizarse de manera presencial, online o mixta, según disponibilidad
+                        y preferencia de la
+                        organización.</p>
+                    <p>Duración: Cada módulo dura 1 hora y 30 minutos, con tiempo para preguntas y debates. El módulo
+                        introductorio
+                        también se extiende a 1h 30min, y la sesión de toma de contacto tiene una duración de 30 min.
+                    </p>
+                    <p>Enfoque práctico:</p>
+                    <ul>
+                        <li>Se combinan presentaciones teóricas con ejercicios prácticos (dinámicas de grupo, estudios
+                            de caso y ejemplos
+                            reales) para afianzar los conceptos.</li>
+                        <li>Se fomenta la participación activa, resolviendo dudas y adaptando el contenido a la realidad
+                            de cada equipo.</li>
+                    </ul>
+                    <p>Materiales: Se proporcionan apuntes o presentaciones de cada módulo, así como recursos
+                        adicionales (plantillas,
+                        lecturas recomendadas, etc.).</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sect14">
+
+            <div>
+                <div>
+                    <h1>Tarifa y aspectos logísticos</h1>
+                    <p>
+                    <ul>
+                        <li>La formación impartida por un experto en SCRUM.</li>
+                        <li>Materiales del módulo (presentaciones, guías, ejercicios)</li>
+                        <li>Soporte asíncrono de 5 días hábiles para resolver dudas que surjan tras la formación</li>
+                    </ul>
+                    </p>
+                    <p>
+                    <ul>
+                        <li>Personalización y consultoría adicional: creación de tableros específicos en JIRA, tutoría
+                            para la adopción de SCRUM
+                            en proyectos concretos, etc.</li>
+                        <li>Número de participantes: Se recomienda un máximo de 15-20 personas por sesión para
+                            garantizar una atención
+                            individualizada y una dinámica participativa.</li>
+                        <li>Adaptación de horarios: Ajustable a la disponibilidad del equipo (jornadas completas o
+                            sesiones repartidas en
+                            varios días)</li>
+                    </ul>
+                    </p>
+                    <h2>Tarifas</h1>
+                        <p>Por módulo (máximo 20 alumnos)</p>
+                        <ul>
+                            <li>1-5 alumnos: 400 €</li>
+                            <li>6-10 alumnos: 600 €</li>
+                            <li>11-15 alumnos: 750 €</li>
+                            <li>16-20 alumnos: 850 €</li>
+                        </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="sect15">
+
+            <div>
+                <div>
+                    <h1>Gracias</h1>
+                    <div>
+                        Datos de contacto:<br>
+                        Teléfono: +34 629 28 60 96<br>
+                        Email: luisjavier.lopez@gmail.com<br>
+                        Linkedin: https://www.linkedin.com/in/luis-javi
+                        er-l%C3%B3pez-arredondo/
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        let debounceTimeout;
+        const sections = Array.from(document.querySelectorAll("section"));
+        const sectionsCount = sections.length;
+        let currSection = 0;
+        const percentageTrigger = 1;
+
+        function setSection(i) {
+            if (i < 0 || i >= sections) { return false; }
+            if (i == currSection) { return; }
+            currSection = i;
+            sections[i].scrollIntoView({ behavior: "smooth" });
+            return true;
+        }
+
+        window.addEventListener("scroll", () => {
+
+            clearTimeout(debounceTimeout);
+
+            debounceTimeout = setTimeout(() => {
+                const section = sections[currSection];
+                const rect = section.getBoundingClientRect();
+
+                const outOfView = (rect.top > section.offsetHeight || rect.bottom < 0)
+                0
+                let nextSection = currSection;
+                if (outOfView) {
+                    nextSection = sections.reduce(
+                        (prev, s, i) => {
+                            const r = s.getBoundingClientRect();
+                            // // const inView = 
+                            // //     (rect.top < section.offsetHeight / 2 && rect.bottom < -section.offsetHeight / 2)
+                            //     || (rect.top > -section.offsetHeight / 2 && rect.bottom < section.offsetHeight / 2); 
+                            const topInView = r.top > 0 && r.top < section.offsetHeight;
+                            const bottomInView = r.bottom > 0 && r.bottom < section.offsetHeight;
+                            const inView = topInView || bottomInView;
+                            const percentageInView =
+                                (r.top <= 0) ?
+                                    (section.offsetHeight + r.top) / section.offsetHeight :
+                                    (r.top < section.offsetHeight)
+                                        ? (section.offsetHeight - r.top) / section.offsetHeight
+                                        : 0;
+                            const { index, percentage } = prev;
+
+                            if (percentage < percentageInView) {
+                                return { index: i, percentage: percentageInView };
+                            } else {
+                                return prev;
+                            }
+                        },
+                        { index: 0, percentage: 0 }
+                    ).index;
+                    console.log(nextSection);
+                } else {
+
+                    nextSection = currSection
+                        + ((rect.top <= -section.offsetHeight / (100 / percentageTrigger))
+                            ? 1
+                            : ((rect.bottom >= section.offsetHeight * (1 + (percentageTrigger / 100)))
+                                ? -1
+                                : 0));
+                }
+
+
+                if (setSection(nextSection)) {
+
+                }
+            }, 100);
+        });
+    </script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script> -->
+</body>
+
+</html>
