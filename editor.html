@@ -220,8 +220,14 @@
                         }
 
                         const sepIndex = content.indexOf(':');
-                        const [pref, suff] = [content.substring(0, sepIndex), content.substring(sepIndex + 1)];
+                        let [pref, suff] = [content.substring(0, sepIndex), content.substring(sepIndex + 1)];
                         console.log({ pref, suff });
+
+                        let type = null;
+                        const typeSepIndex = suff.indexOf(':');
+                        if (typeSepIndex > 0) {
+                            [type, suff] = [suff.substring(0, typeSepIndex), suff.substring(typeSepIndex + 1)];
+                        }
 
                         const tags = pref ? pref.split(',') : [];
                         const onlyDigits = elemento => /^\d+$/.test(elemento);
@@ -241,12 +247,22 @@
                             level : (digits.length > 0) ? +digits[0] : 0,
                             pieces: [],
                         };
+                        if (type) { newPiece.type = type; }
                         infoStack[infoStack.length - 1].pieces.push(newPiece);
                         infoStack.push(newPiece);
 
                     }
                 );
                 console.log(info);
+                pieceElement.setPiece(info);
+            }
+        );
+
+        document.addEventListener(
+            'piece-element.click',
+            (evt) => {
+                const pieceElement = evt.detail;
+                graphEditor.addNode({label : pieceElement.piece.info});
             }
         );
 

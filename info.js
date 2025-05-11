@@ -1,4 +1,386 @@
 const info =
+{
+    "info": "Scrum\n.:olist:Fundamentos\n..Definición: Marco de trabajo ágil para resolver problemas complejos\n...2:Framework, define pautas y herramientas. \n...2:Define el “qué”, no el “como”\n...2:Para generar soluciones adaptativas a problemas complejos.\n...2:Empirismo, la toma de decisiones se basa en lo observado.\n...2:Lean thinking, reduce lo inútil y se centra en lo esencial.\n..Basado en: Empirismo y pensamiento lean\n..:olist:Principios\n...1:Transparencia\n...1:Inspección\n...1:Adaptación\n..:olist:Valores Scrum:\n...1:Compromiso\n...1:Coraje\n...1:Enfoque\n...1:Apertura\n...1:Respeto\n.:olist:Roles Scrum (Scrum Team)\n..:list:Scrum Master\n...1:Servant leader\n...1:Facilita y elimina impedimentos\n...1:Promueve la comprensión y aplicación de Scrum\n..:list:Product Owner\n...1:Responsable del Product Backlog\n...1:Maximiza el valor del producto\n...1:Toma decisiones de negocio\n..:list:Developers\n...1:Entregan incrementos de valor\n...1:Autogestionados\n...1:Comprometidos con la calidad\n.:olist:Artefactos\n..:list:Product Backlog —> Product Goal\n...1:Lista ordenada de necesidades\n...1:Refinado continuamente\n...1:Posee Objetivo del Producto\n..:list:Sprint Backlog —> Sprint Goal\n...1:Items seleccionados + plan\n...1:Objetivo del Sprint\n..:list:Incremento —> Definición de Terminado\n...1:Trabajo completado y usable\n.:olist:Eventos Scrum\n..:list:Sprint (máx. 1 mes)\n...1:Contenedor de todo el trabajo\n...1:Tiene un Objetivo del Sprint\n..:list:Sprint Planning (8 h)\n...1:¿Qué se va a hacer?\n...1:¿Cómo se hará?\n...1:¿Quién lo hará?\n..:list:Daily Scrum (15 min)\n...1:Sincronización del equipo\n..:list:Sprint Review (4 h)\n...1:Revisión del Incremento con stakeholders\n..:list:Sprint Retrospective (3 h)\n...1:Mejora continua del proceso",
+    "tags": [],
+    "pieces": [
+        {
+            "info": "Scrum",
+            "tags": [],
+            "level": 0,
+            "pieces": [
+                {
+                    "info": "Fundamentos",
+                    "tags": [],
+                    "level": 0,
+                    "pieces": [
+                        {
+                            "info": " Marco de trabajo ágil para resolver problemas complejos",
+                            "tags": [
+                                "Definición"
+                            ],
+                            "level": 0,
+                            "pieces": [
+                                {
+                                    "info": "Framework, define pautas y herramientas. ",
+                                    "tags": [],
+                                    "level": 2,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Define el “qué”, no el “como”",
+                                    "tags": [],
+                                    "level": 2,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Para generar soluciones adaptativas a problemas complejos.",
+                                    "tags": [],
+                                    "level": 2,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Empirismo, la toma de decisiones se basa en lo observado.",
+                                    "tags": [],
+                                    "level": 2,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Lean thinking, reduce lo inútil y se centra en lo esencial.",
+                                    "tags": [],
+                                    "level": 2,
+                                    "pieces": []
+                                }
+                            ]
+                        },
+                        {
+                            "info": " Empirismo y pensamiento lean",
+                            "tags": [
+                                "Basado en"
+                            ],
+                            "level": 0,
+                            "pieces": []
+                        },
+                        {
+                            "info": "Principios",
+                            "tags": [],
+                            "level": 0,
+                            "pieces": [
+                                {
+                                    "info": "Transparencia",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Inspección",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Adaptación",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                }
+                            ],
+                            "type": "olist"
+                        },
+                        {
+                            "info": "Valores Scrum:",
+                            "tags": [],
+                            "level": 0,
+                            "pieces": [
+                                {
+                                    "info": "Compromiso",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Coraje",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Enfoque",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Apertura",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Respeto",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                }
+                            ],
+                            "type": "olist"
+                        }
+                    ],
+                    "type": "olist"
+                },
+                {
+                    "info": "Roles Scrum (Scrum Team)",
+                    "tags": [],
+                    "level": 0,
+                    "pieces": [
+                        {
+                            "info": "Scrum Master",
+                            "tags": [],
+                            "level": 0,
+                            "pieces": [
+                                {
+                                    "info": "Servant leader",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Facilita y elimina impedimentos",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Promueve la comprensión y aplicación de Scrum",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                }
+                            ],
+                            "type": "list"
+                        },
+                        {
+                            "info": "Product Owner",
+                            "tags": [],
+                            "level": 0,
+                            "pieces": [
+                                {
+                                    "info": "Responsable del Product Backlog",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Maximiza el valor del producto",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Toma decisiones de negocio",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                }
+                            ],
+                            "type": "list"
+                        },
+                        {
+                            "info": "Developers",
+                            "tags": [],
+                            "level": 0,
+                            "pieces": [
+                                {
+                                    "info": "Entregan incrementos de valor",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Autogestionados",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Comprometidos con la calidad",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                }
+                            ],
+                            "type": "list"
+                        }
+                    ],
+                    "type": "olist"
+                },
+                {
+                    "info": "Artefactos",
+                    "tags": [],
+                    "level": 0,
+                    "pieces": [
+                        {
+                            "info": "Product Backlog —> Product Goal",
+                            "tags": [],
+                            "level": 0,
+                            "pieces": [
+                                {
+                                    "info": "Lista ordenada de necesidades",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Refinado continuamente",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Posee Objetivo del Producto",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                }
+                            ],
+                            "type": "list"
+                        },
+                        {
+                            "info": "Sprint Backlog —> Sprint Goal",
+                            "tags": [],
+                            "level": 0,
+                            "pieces": [
+                                {
+                                    "info": "Items seleccionados + plan",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Objetivo del Sprint",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                }
+                            ],
+                            "type": "list"
+                        },
+                        {
+                            "info": "Incremento —> Definición de Terminado",
+                            "tags": [],
+                            "level": 0,
+                            "pieces": [
+                                {
+                                    "info": "Trabajo completado y usable",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                }
+                            ],
+                            "type": "list"
+                        }
+                    ],
+                    "type": "olist"
+                },
+                {
+                    "info": "Eventos Scrum",
+                    "tags": [],
+                    "level": 0,
+                    "pieces": [
+                        {
+                            "info": "Sprint (máx. 1 mes)",
+                            "tags": [],
+                            "level": 0,
+                            "pieces": [
+                                {
+                                    "info": "Contenedor de todo el trabajo",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "Tiene un Objetivo del Sprint",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                }
+                            ],
+                            "type": "list"
+                        },
+                        {
+                            "info": "Sprint Planning (8 h)",
+                            "tags": [],
+                            "level": 0,
+                            "pieces": [
+                                {
+                                    "info": "¿Qué se va a hacer?",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "¿Cómo se hará?",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                },
+                                {
+                                    "info": "¿Quién lo hará?",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                }
+                            ],
+                            "type": "list"
+                        },
+                        {
+                            "info": "Daily Scrum (15 min)",
+                            "tags": [],
+                            "level": 0,
+                            "pieces": [
+                                {
+                                    "info": "Sincronización del equipo",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                }
+                            ],
+                            "type": "list"
+                        },
+                        {
+                            "info": "Sprint Review (4 h)",
+                            "tags": [],
+                            "level": 0,
+                            "pieces": [
+                                {
+                                    "info": "Revisión del Incremento con stakeholders",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                }
+                            ],
+                            "type": "list"
+                        },
+                        {
+                            "info": "Sprint Retrospective (3 h)",
+                            "tags": [],
+                            "level": 0,
+                            "pieces": [
+                                {
+                                    "info": "Mejora continua del proceso",
+                                    "tags": [],
+                                    "level": 1,
+                                    "pieces": []
+                                }
+                            ],
+                            "type": "list"
+                        }
+                    ],
+                    "type": "olist"
+                }
+            ]
+        }
+    ]
+};
 // {
 //     "info": "Prueba\n.list:\n..uno\n..dos\n..tres\n.Fin de la lista",
 //     "tags": [],
@@ -44,487 +426,487 @@ const info =
 //         }
 //     ]
 // };
-{
-    "info": "Eneagramas\n.Historia\n..9 puntas\n..Cristianismo Evadrius Ponticus, siglo IV\n..Juadismo, Sufismo, Taoismo.\n..Oscar Hichazo\n..Claudio Naranjo\n..Padre Robert Ox\n.Eneagrama\n..Tríada de la tripa\n...Unidas por la ira.\n...8, desafiante\n....Desafiante\n....Cabecillas naturales\n....Punto débil, incapacidad para mostrar vulnerabilidad. \n....Le impide entablar relaciones realmente significativas.\n....Demuestra ira buscando el conflicto verbal o físico.\n....:Pecado capital: lujuria\n...9, pacificador\n....Evitan conflicto. Amable, mediador natural.\n....Para no disgustar, reprimen sus ansiedades y frustraciones, no obtienen lo que necesitan de las relaciones.\n....:Pecado capital: pereza\n...1, perfeccionista\n....Autodisciplinados, morales y se preocupan por lo detalles.\n....Merarse a sí mismo es su principal precupación.\n....Blanco o negro, se enfadan si se incumplen normas o abandonan responsabilidades.\n....La ira se interioriza en forma de resentimiento.\n....:Pecado capital: resentimiento\n..Tríada del corazón\n...Definida por sus sentimientos y emociones.\n...2, el ayudante\n....Deseo de sentirse necesidado.\n....Las relaciones le definen y evitan expresar sus propias necesidades.\n....Los demás les deben algo.\n....Atienden los sentimientos de los demás, menos los suyos propios.\n....:Pecado capital: orgullo\n...3, el ejecutante\n....Grandes objteivos y gran satisfacción al alcanzarlos.\n....A más existosos, productovos y eficientes, mayor su autoestima.\n....Autoengaño, incapacidad de asumir errores.\n....Les cuesta identificar las emociones en sí mismos y en los demás.\n....:Pecado capital: engaño\n...4, el romático\n....Sintonía con la belleza y tragedia del mundo, aprecian el expectro de la experiencia humana.\n....Tienden a aislarse, melancolía, imprevisibilidad y ensimismamiento.\n....:Pecado capital: envidia\n..Tríada de la cabeza\n...Unida por el miedo.\n...5, investigador\n....Placer al compartir su riqueza de conocmiento.\n....Independientes, opiniones lógicas y objetivas.\n....MIedo a depender de los demás, actitud defensiva, tendencia al cinismo y a juzgar a los demás.\n....:Pecado capital: avaricia\n...6, el lealista\n....Servir a su familia y comunidad.\n....Seguros con normas y orden, buscando seguridad y estabilidad.\n....Miedo a perder esta seguridad.\n....Ansiedades y paranoias.\n....Cualquier temor es una crisis.\n....:Pecado capital: miedo\n...7, el entusiasta\n....Alma de la fiesta, optimistas.\n....Popular.\n....Les cuesta comprometerse.\n....Persiguen el placer para escapar de cualquier emoción negativa, susceptibles a la adicción.\n....Miedo a las emociones negativas, llenan sus agendas deactos sociales y bienes meteriales.\n....:Pecado capital: glotonería\n.Alas\n..Uno de los tipos de izquierda o derecha refuerza algunas características de tu personaldad.\n..Se denominan 0W# (0 es el tipo principal, # el ala)\n.Número de seguridad\n..Cuando te sientes seguro, protegido, aporta características positivas.\n.Número de estrés\n..Cuando las cosas no van bien, adoptan los rasgos negativos del núero de estrés.\n.Pecado capital\n..Motivación negativa",
-    "tags": [],
-    "pieces": [
-        {
-            "info": "Eneagramas",
-            "tags": [],
-            "level": 0,
-            "pieces": [
-                {
-                    "info": "Historia",
-                    "tags": [],
-                    "level": 0,
-                    "pieces": [
-                        {
-                            "info": "9 puntas",
-                            "tags": [],
-                            "level": 0,
-                            "pieces": []
-                        },
-                        {
-                            "info": "Cristianismo Evadrius Ponticus, siglo IV",
-                            "tags": [],
-                            "level": 0,
-                            "pieces": []
-                        },
-                        {
-                            "info": "Juadismo, Sufismo, Taoismo.",
-                            "tags": [],
-                            "level": 0,
-                            "pieces": []
-                        },
-                        {
-                            "info": "Oscar Hichazo",
-                            "tags": [],
-                            "level": 0,
-                            "pieces": []
-                        },
-                        {
-                            "info": "Claudio Naranjo",
-                            "tags": [],
-                            "level": 0,
-                            "pieces": []
-                        },
-                        {
-                            "info": "Padre Robert Ox",
-                            "tags": [],
-                            "level": 0,
-                            "pieces": []
-                        }
-                    ]
-                },
-                {
-                    "info": "Eneagrama",
-                    "tags": [],
-                    "level": 0,
-                    "pieces": [
-                        {
-                            "info": "Tríada de la tripa",
-                            "tags": [],
-                            "level": 0,
-                            "pieces": [
-                                {
-                                    "info": "Unidas por la ira.",
-                                    "tags": [],
-                                    "level": 0,
-                                    "pieces": []
-                                },
-                                {
-                                    "info": "8, desafiante",
-                                    "tags": [],
-                                    "level": 0,
-                                    "pieces": [
-                                        {
-                                            "info": "Desafiante",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Cabecillas naturales",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Punto débil, incapacidad para mostrar vulnerabilidad. ",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Le impide entablar relaciones realmente significativas.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Demuestra ira buscando el conflicto verbal o físico.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Pecado capital: lujuria",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        }
-                                    ]
-                                },
-                                {
-                                    "info": "9, pacificador",
-                                    "tags": [],
-                                    "level": 0,
-                                    "pieces": [
-                                        {
-                                            "info": "Evitan conflicto. Amable, mediador natural.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Para no disgustar, reprimen sus ansiedades y frustraciones, no obtienen lo que necesitan de las relaciones.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Pecado capital: pereza",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        }
-                                    ]
-                                },
-                                {
-                                    "info": "1, perfeccionista",
-                                    "tags": [],
-                                    "level": 0,
-                                    "pieces": [
-                                        {
-                                            "info": "Autodisciplinados, morales y se preocupan por lo detalles.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Merarse a sí mismo es su principal precupación.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Blanco o negro, se enfadan si se incumplen normas o abandonan responsabilidades.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "La ira se interioriza en forma de resentimiento.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Pecado capital: resentimiento",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "info": "Tríada del corazón",
-                            "tags": [],
-                            "level": 0,
-                            "pieces": [
-                                {
-                                    "info": "Definida por sus sentimientos y emociones.",
-                                    "tags": [],
-                                    "level": 0,
-                                    "pieces": []
-                                },
-                                {
-                                    "info": "2, el ayudante",
-                                    "tags": [],
-                                    "level": 0,
-                                    "pieces": [
-                                        {
-                                            "info": "Deseo de sentirse necesidado.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Las relaciones le definen y evitan expresar sus propias necesidades.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Los demás les deben algo.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Atienden los sentimientos de los demás, menos los suyos propios.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Pecado capital: orgullo",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        }
-                                    ]
-                                },
-                                {
-                                    "info": "3, el ejecutante",
-                                    "tags": [],
-                                    "level": 0,
-                                    "pieces": [
-                                        {
-                                            "info": "Grandes objteivos y gran satisfacción al alcanzarlos.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "A más existosos, productovos y eficientes, mayor su autoestima.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Autoengaño, incapacidad de asumir errores.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Les cuesta identificar las emociones en sí mismos y en los demás.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Pecado capital: engaño",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        }
-                                    ]
-                                },
-                                {
-                                    "info": "4, el romático",
-                                    "tags": [],
-                                    "level": 0,
-                                    "pieces": [
-                                        {
-                                            "info": "Sintonía con la belleza y tragedia del mundo, aprecian el expectro de la experiencia humana.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Tienden a aislarse, melancolía, imprevisibilidad y ensimismamiento.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Pecado capital: envidia",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "info": "Tríada de la cabeza",
-                            "tags": [],
-                            "level": 0,
-                            "pieces": [
-                                {
-                                    "info": "Unida por el miedo.",
-                                    "tags": [],
-                                    "level": 0,
-                                    "pieces": []
-                                },
-                                {
-                                    "info": "5, investigador",
-                                    "tags": [],
-                                    "level": 0,
-                                    "pieces": [
-                                        {
-                                            "info": "Placer al compartir su riqueza de conocmiento.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Independientes, opiniones lógicas y objetivas.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "MIedo a depender de los demás, actitud defensiva, tendencia al cinismo y a juzgar a los demás.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Pecado capital: avaricia",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        }
-                                    ]
-                                },
-                                {
-                                    "info": "6, el lealista",
-                                    "tags": [],
-                                    "level": 0,
-                                    "pieces": [
-                                        {
-                                            "info": "Servir a su familia y comunidad.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Seguros con normas y orden, buscando seguridad y estabilidad.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Miedo a perder esta seguridad.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Ansiedades y paranoias.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Cualquier temor es una crisis.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Pecado capital: miedo",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        }
-                                    ]
-                                },
-                                {
-                                    "info": "7, el entusiasta",
-                                    "tags": [],
-                                    "level": 0,
-                                    "pieces": [
-                                        {
-                                            "info": "Alma de la fiesta, optimistas.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Popular.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Les cuesta comprometerse.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Persiguen el placer para escapar de cualquier emoción negativa, susceptibles a la adicción.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Miedo a las emociones negativas, llenan sus agendas deactos sociales y bienes meteriales.",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        },
-                                        {
-                                            "info": "Pecado capital: glotonería",
-                                            "tags": [],
-                                            "level": 0,
-                                            "pieces": []
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "info": "Alas",
-                    "tags": [],
-                    "level": 0,
-                    "pieces": [
-                        {
-                            "info": "Uno de los tipos de izquierda o derecha refuerza algunas características de tu personaldad.",
-                            "tags": [],
-                            "level": 0,
-                            "pieces": []
-                        },
-                        {
-                            "info": "Se denominan 0W# (0 es el tipo principal, # el ala)",
-                            "tags": [],
-                            "level": 0,
-                            "pieces": []
-                        }
-                    ]
-                },
-                {
-                    "info": "Número de seguridad",
-                    "tags": [],
-                    "level": 0,
-                    "pieces": [
-                        {
-                            "info": "Cuando te sientes seguro, protegido, aporta características positivas.",
-                            "tags": [],
-                            "level": 0,
-                            "pieces": []
-                        }
-                    ]
-                },
-                {
-                    "info": "Número de estrés",
-                    "tags": [],
-                    "level": 0,
-                    "pieces": [
-                        {
-                            "info": "Cuando las cosas no van bien, adoptan los rasgos negativos del núero de estrés.",
-                            "tags": [],
-                            "level": 0,
-                            "pieces": []
-                        }
-                    ]
-                },
-                {
-                    "info": "Pecado capital",
-                    "tags": [],
-                    "level": 0,
-                    "pieces": [
-                        {
-                            "info": "Motivación negativa",
-                            "tags": [],
-                            "level": 0,
-                            "pieces": []
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-};
+// {
+//     "info": "Eneagramas\n.Historia\n..9 puntas\n..Cristianismo Evadrius Ponticus, siglo IV\n..Juadismo, Sufismo, Taoismo.\n..Oscar Hichazo\n..Claudio Naranjo\n..Padre Robert Ox\n.Eneagrama\n..Tríada de la tripa\n...Unidas por la ira.\n...8, desafiante\n....Desafiante\n....Cabecillas naturales\n....Punto débil, incapacidad para mostrar vulnerabilidad. \n....Le impide entablar relaciones realmente significativas.\n....Demuestra ira buscando el conflicto verbal o físico.\n....:Pecado capital: lujuria\n...9, pacificador\n....Evitan conflicto. Amable, mediador natural.\n....Para no disgustar, reprimen sus ansiedades y frustraciones, no obtienen lo que necesitan de las relaciones.\n....:Pecado capital: pereza\n...1, perfeccionista\n....Autodisciplinados, morales y se preocupan por lo detalles.\n....Merarse a sí mismo es su principal precupación.\n....Blanco o negro, se enfadan si se incumplen normas o abandonan responsabilidades.\n....La ira se interioriza en forma de resentimiento.\n....:Pecado capital: resentimiento\n..Tríada del corazón\n...Definida por sus sentimientos y emociones.\n...2, el ayudante\n....Deseo de sentirse necesidado.\n....Las relaciones le definen y evitan expresar sus propias necesidades.\n....Los demás les deben algo.\n....Atienden los sentimientos de los demás, menos los suyos propios.\n....:Pecado capital: orgullo\n...3, el ejecutante\n....Grandes objteivos y gran satisfacción al alcanzarlos.\n....A más existosos, productovos y eficientes, mayor su autoestima.\n....Autoengaño, incapacidad de asumir errores.\n....Les cuesta identificar las emociones en sí mismos y en los demás.\n....:Pecado capital: engaño\n...4, el romático\n....Sintonía con la belleza y tragedia del mundo, aprecian el expectro de la experiencia humana.\n....Tienden a aislarse, melancolía, imprevisibilidad y ensimismamiento.\n....:Pecado capital: envidia\n..Tríada de la cabeza\n...Unida por el miedo.\n...5, investigador\n....Placer al compartir su riqueza de conocmiento.\n....Independientes, opiniones lógicas y objetivas.\n....MIedo a depender de los demás, actitud defensiva, tendencia al cinismo y a juzgar a los demás.\n....:Pecado capital: avaricia\n...6, el lealista\n....Servir a su familia y comunidad.\n....Seguros con normas y orden, buscando seguridad y estabilidad.\n....Miedo a perder esta seguridad.\n....Ansiedades y paranoias.\n....Cualquier temor es una crisis.\n....:Pecado capital: miedo\n...7, el entusiasta\n....Alma de la fiesta, optimistas.\n....Popular.\n....Les cuesta comprometerse.\n....Persiguen el placer para escapar de cualquier emoción negativa, susceptibles a la adicción.\n....Miedo a las emociones negativas, llenan sus agendas deactos sociales y bienes meteriales.\n....:Pecado capital: glotonería\n.Alas\n..Uno de los tipos de izquierda o derecha refuerza algunas características de tu personaldad.\n..Se denominan 0W# (0 es el tipo principal, # el ala)\n.Número de seguridad\n..Cuando te sientes seguro, protegido, aporta características positivas.\n.Número de estrés\n..Cuando las cosas no van bien, adoptan los rasgos negativos del núero de estrés.\n.Pecado capital\n..Motivación negativa",
+//     "tags": [],
+//     "pieces": [
+//         {
+//             "info": "Eneagramas",
+//             "tags": [],
+//             "level": 0,
+//             "pieces": [
+//                 {
+//                     "info": "Historia",
+//                     "tags": [],
+//                     "level": 0,
+//                     "pieces": [
+//                         {
+//                             "info": "9 puntas",
+//                             "tags": [],
+//                             "level": 0,
+//                             "pieces": []
+//                         },
+//                         {
+//                             "info": "Cristianismo Evadrius Ponticus, siglo IV",
+//                             "tags": [],
+//                             "level": 0,
+//                             "pieces": []
+//                         },
+//                         {
+//                             "info": "Juadismo, Sufismo, Taoismo.",
+//                             "tags": [],
+//                             "level": 0,
+//                             "pieces": []
+//                         },
+//                         {
+//                             "info": "Oscar Hichazo",
+//                             "tags": [],
+//                             "level": 0,
+//                             "pieces": []
+//                         },
+//                         {
+//                             "info": "Claudio Naranjo",
+//                             "tags": [],
+//                             "level": 0,
+//                             "pieces": []
+//                         },
+//                         {
+//                             "info": "Padre Robert Ox",
+//                             "tags": [],
+//                             "level": 0,
+//                             "pieces": []
+//                         }
+//                     ]
+//                 },
+//                 {
+//                     "info": "Eneagrama",
+//                     "tags": [],
+//                     "level": 0,
+//                     "pieces": [
+//                         {
+//                             "info": "Tríada de la tripa",
+//                             "tags": [],
+//                             "level": 0,
+//                             "pieces": [
+//                                 {
+//                                     "info": "Unidas por la ira.",
+//                                     "tags": [],
+//                                     "level": 0,
+//                                     "pieces": []
+//                                 },
+//                                 {
+//                                     "info": "8, desafiante",
+//                                     "tags": [],
+//                                     "level": 0,
+//                                     "pieces": [
+//                                         {
+//                                             "info": "Desafiante",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Cabecillas naturales",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Punto débil, incapacidad para mostrar vulnerabilidad. ",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Le impide entablar relaciones realmente significativas.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Demuestra ira buscando el conflicto verbal o físico.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Pecado capital: lujuria",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         }
+//                                     ]
+//                                 },
+//                                 {
+//                                     "info": "9, pacificador",
+//                                     "tags": [],
+//                                     "level": 0,
+//                                     "pieces": [
+//                                         {
+//                                             "info": "Evitan conflicto. Amable, mediador natural.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Para no disgustar, reprimen sus ansiedades y frustraciones, no obtienen lo que necesitan de las relaciones.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Pecado capital: pereza",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         }
+//                                     ]
+//                                 },
+//                                 {
+//                                     "info": "1, perfeccionista",
+//                                     "tags": [],
+//                                     "level": 0,
+//                                     "pieces": [
+//                                         {
+//                                             "info": "Autodisciplinados, morales y se preocupan por lo detalles.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Merarse a sí mismo es su principal precupación.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Blanco o negro, se enfadan si se incumplen normas o abandonan responsabilidades.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "La ira se interioriza en forma de resentimiento.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Pecado capital: resentimiento",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         }
+//                                     ]
+//                                 }
+//                             ]
+//                         },
+//                         {
+//                             "info": "Tríada del corazón",
+//                             "tags": [],
+//                             "level": 0,
+//                             "pieces": [
+//                                 {
+//                                     "info": "Definida por sus sentimientos y emociones.",
+//                                     "tags": [],
+//                                     "level": 0,
+//                                     "pieces": []
+//                                 },
+//                                 {
+//                                     "info": "2, el ayudante",
+//                                     "tags": [],
+//                                     "level": 0,
+//                                     "pieces": [
+//                                         {
+//                                             "info": "Deseo de sentirse necesidado.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Las relaciones le definen y evitan expresar sus propias necesidades.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Los demás les deben algo.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Atienden los sentimientos de los demás, menos los suyos propios.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Pecado capital: orgullo",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         }
+//                                     ]
+//                                 },
+//                                 {
+//                                     "info": "3, el ejecutante",
+//                                     "tags": [],
+//                                     "level": 0,
+//                                     "pieces": [
+//                                         {
+//                                             "info": "Grandes objteivos y gran satisfacción al alcanzarlos.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "A más existosos, productovos y eficientes, mayor su autoestima.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Autoengaño, incapacidad de asumir errores.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Les cuesta identificar las emociones en sí mismos y en los demás.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Pecado capital: engaño",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         }
+//                                     ]
+//                                 },
+//                                 {
+//                                     "info": "4, el romático",
+//                                     "tags": [],
+//                                     "level": 0,
+//                                     "pieces": [
+//                                         {
+//                                             "info": "Sintonía con la belleza y tragedia del mundo, aprecian el expectro de la experiencia humana.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Tienden a aislarse, melancolía, imprevisibilidad y ensimismamiento.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Pecado capital: envidia",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         }
+//                                     ]
+//                                 }
+//                             ]
+//                         },
+//                         {
+//                             "info": "Tríada de la cabeza",
+//                             "tags": [],
+//                             "level": 0,
+//                             "pieces": [
+//                                 {
+//                                     "info": "Unida por el miedo.",
+//                                     "tags": [],
+//                                     "level": 0,
+//                                     "pieces": []
+//                                 },
+//                                 {
+//                                     "info": "5, investigador",
+//                                     "tags": [],
+//                                     "level": 0,
+//                                     "pieces": [
+//                                         {
+//                                             "info": "Placer al compartir su riqueza de conocmiento.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Independientes, opiniones lógicas y objetivas.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "MIedo a depender de los demás, actitud defensiva, tendencia al cinismo y a juzgar a los demás.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Pecado capital: avaricia",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         }
+//                                     ]
+//                                 },
+//                                 {
+//                                     "info": "6, el lealista",
+//                                     "tags": [],
+//                                     "level": 0,
+//                                     "pieces": [
+//                                         {
+//                                             "info": "Servir a su familia y comunidad.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Seguros con normas y orden, buscando seguridad y estabilidad.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Miedo a perder esta seguridad.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Ansiedades y paranoias.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Cualquier temor es una crisis.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Pecado capital: miedo",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         }
+//                                     ]
+//                                 },
+//                                 {
+//                                     "info": "7, el entusiasta",
+//                                     "tags": [],
+//                                     "level": 0,
+//                                     "pieces": [
+//                                         {
+//                                             "info": "Alma de la fiesta, optimistas.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Popular.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Les cuesta comprometerse.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Persiguen el placer para escapar de cualquier emoción negativa, susceptibles a la adicción.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Miedo a las emociones negativas, llenan sus agendas deactos sociales y bienes meteriales.",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         },
+//                                         {
+//                                             "info": "Pecado capital: glotonería",
+//                                             "tags": [],
+//                                             "level": 0,
+//                                             "pieces": []
+//                                         }
+//                                     ]
+//                                 }
+//                             ]
+//                         }
+//                     ]
+//                 },
+//                 {
+//                     "info": "Alas",
+//                     "tags": [],
+//                     "level": 0,
+//                     "pieces": [
+//                         {
+//                             "info": "Uno de los tipos de izquierda o derecha refuerza algunas características de tu personaldad.",
+//                             "tags": [],
+//                             "level": 0,
+//                             "pieces": []
+//                         },
+//                         {
+//                             "info": "Se denominan 0W# (0 es el tipo principal, # el ala)",
+//                             "tags": [],
+//                             "level": 0,
+//                             "pieces": []
+//                         }
+//                     ]
+//                 },
+//                 {
+//                     "info": "Número de seguridad",
+//                     "tags": [],
+//                     "level": 0,
+//                     "pieces": [
+//                         {
+//                             "info": "Cuando te sientes seguro, protegido, aporta características positivas.",
+//                             "tags": [],
+//                             "level": 0,
+//                             "pieces": []
+//                         }
+//                     ]
+//                 },
+//                 {
+//                     "info": "Número de estrés",
+//                     "tags": [],
+//                     "level": 0,
+//                     "pieces": [
+//                         {
+//                             "info": "Cuando las cosas no van bien, adoptan los rasgos negativos del núero de estrés.",
+//                             "tags": [],
+//                             "level": 0,
+//                             "pieces": []
+//                         }
+//                     ]
+//                 },
+//                 {
+//                     "info": "Pecado capital",
+//                     "tags": [],
+//                     "level": 0,
+//                     "pieces": [
+//                         {
+//                             "info": "Motivación negativa",
+//                             "tags": [],
+//                             "level": 0,
+//                             "pieces": []
+//                         }
+//                     ]
+//                 }
+//             ]
+//         }
+//     ]
+// };
 // {
 //     'info': 'Metodología Montessori',
 //     'level': 0,
